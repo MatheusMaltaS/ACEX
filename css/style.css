@@ -83,7 +83,10 @@ main {
 .icone span {
   font-size: 14px;
 }
-
+.preto{
+  background-color: black;
+  displa
+}
 .login-container {
     background-color: rgb(20, 91, 184);
     border-radius: 14px;
@@ -91,7 +94,7 @@ main {
     text-align: center;
     width: 20%;
     
-}
+} 
 input {
   width: 75%;
   padding: 9px;

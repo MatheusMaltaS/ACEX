@@ -2,6 +2,7 @@
   --bg-color: rgb(20, 91, 184);
   --text-color: white;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -16,14 +17,16 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 100%;    
+  width: 100%;
 }
+
 header h1 {
   color: var(--text-color);
   font-size: 1.5rem;
   margin: 0 1%;
-} 
-header a{
+}
+
+header a {
   color: var(--text-color);
   text-decoration: none;
 
@@ -42,11 +45,13 @@ nav a {
   color: var(--text-color);
   text-decoration: none;
 }
+
 main {
   display: flex;
   padding: 5% 10% 0 10%;
   flex-wrap: wrap;
 }
+
 .barralateral {
   height: 95vh;
   background-color: var(--bg-color);
@@ -83,34 +88,52 @@ main {
 .icone span {
   font-size: 14px;
 }
-.preto{
+
+.preto {
   background-color: black;
-  displa
 }
+
 .login-container {
-    background-color: rgb(20, 91, 184);
-    border-radius: 14px;
-    color: white;
-    text-align: center;
-    width: 20%;
-    
-} 
+  background-color: rgb(20, 91, 184);
+  border-radius: 14px;
+  color: white;
+  text-align: center;
+  width: 35rem;
+}
+
 input {
-  width: 75%;
+  width: 30rem;
   padding: 9px;
   border: none;
   outline: none;
   font-size: 15px;
-  
-  margin-bottom: 10px;
   border-radius: 10px;
 }
+
+.input-box {
+  margin-bottom: 25px;
+}
+
+.error-txt {
+  position: absolute;
+  font-size: 1rem;
+  color: red;
+  margin-left: 2rem;
+  text-align: left;
+  display: none;
+}
+
+.error-txt.error{
+  display: block;
+}
+
 button {
   background-color: white;
   border: none;
   padding: 6px;
+  font-size: 15px;
   border-radius: 10px;
-  width: 80%;
+  width: 31rem;
   color: blue;
   cursor: pointer;
   margin-top: 10px;
@@ -118,13 +141,14 @@ button {
 }
 
 
-.login {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-  
+.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
 }
+
 .logo {
   width: 100%;
   display: flex;
@@ -132,24 +156,27 @@ button {
   align-items: center;
   margin-bottom: 2rem;
 }
-.logo img{
+
+.logo img {
   width: 30%;
 }
 
 .logo2 {
- width: 30%;
+  width: 30%;
 }
 
 .logo2 img {
   width: 100%;
 }
+
 .logo3 {
- width: 30%;
+  width: 30%;
 }
 
 .logo3 img {
   width: 100%;
 }
+
 .ai {
   text-decoration: none;
   color: black;
@@ -161,13 +188,13 @@ button {
 
 }
 
-.texto{
+.texto {
   width: 100%;
   margin-right: 5rem;
   font-size: 1.1rem;
 }
 
-.imagemSobre img{
+.imagemSobre img {
   width: 100%;
 }
 
@@ -176,16 +203,3 @@ button {
   width: 100%;
   justify-content: center;
 }
-
-
-
-
-
-/* para responsividade 
-@media (max-width:1200px){
-  body {
-    background: black;
-  }
-} */
-
-

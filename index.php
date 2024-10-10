@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['url_anterior'] = '../index.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

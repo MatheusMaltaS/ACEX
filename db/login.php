@@ -20,14 +20,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $senha_hash = $usuario['senha'];
 
         if (password_verify($senha, $senha_hash)) {
-            header("Location: ../index.php");
+            $_SESSION['login'] = true;
+            $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['email'] = $usuario['email'];
+            $_SESSION['senha'] = $senha;
+            $_SESSION['admin'] = $usuario['admin'];
+            $_SESSION['id'] = $usuario['id'];
+            if(isset($_SESSION['url_anterior'])) {
+                header("Location: " . $_SESSION['url_anterior']);
+            } else {
+                header("Location: ../index.php");
+            }
         } else {
             $_SESSION['aviso_senha'] = "Senha incorreta!";
             $_SESSION['email'] = $email;
             header("Location: ../login.php");
         }
     } else {
-        $_SESSION['aviso_usuario'] = "Usuário não cadastrado!";
+        $_SESSION['aviso_usuario'] = "E-mail não cadastrado!";
+        $_SESSION['email'] = $email;
         header("Location: ../login.php");
     }
 }

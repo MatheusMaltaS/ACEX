@@ -16,14 +16,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
-
+    
     if ($result->num_rows == 0) {
         $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
         $stmt = $conexao->prepare($sql);
         $stmt->bind_param("sss", $nome, $email, $senha_codificada);
         $stmt->execute();
+        $result = $stmt->get_result();
 
-        header("Location: ../index.php");
+        $_SESSION['login'] = true;
+        $_SESSION['nome'] = $nome;
+        $_SESSION['email'] = $email;
+        $_SESSION['senha'] = $senha;
+        $_SESSION['id'] = $conexao->insert_id;
+
+        if(isset($_SESSION['url_anterior'])) {
+            header("Location: " . $_SESSION['url_anterior']);
+        } else {
+            header("Location: ../index.php");
+        }
     } else {
         $_SESSION['aviso'] = "Email já cadastrado!";
         $_SESSION['nome'] = $nome;

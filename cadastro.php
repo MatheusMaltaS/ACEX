@@ -25,19 +25,15 @@ unset($_SESSION['email']);
     include "header.php";
     ?>
     <main>
-        <section class="form">
+        <section>
             <div class="logo">
                 <img src="./imagens/imagem1.jpg"></img>
             </div>
-            <div class="logo2">
-                <img src="./imagens/imagem2.jpg"></img>
-            </div>
-
-
-            <div class="login-container">
-                <form action="./db/cadastro.php" method="POST" id="form_cadastro">
-                    <div class="logo1">
-                    </div>
+            <div class="form">
+                <div class="logo2">
+                    <img src="./imagens/imagem2.jpg"></img>
+                </div>
+                <form action="./db/cadastro.php" method="POST" class="login-container" id="form_cadastro">
                     <h1>Cadastro</h1>
                     <div class="input-box">
                         <input type="text" name="nome" id="nome" class="item" placeholder="Nome" value="<?php echo htmlspecialchars($nome); ?>">
@@ -55,9 +51,12 @@ unset($_SESSION['email']);
                             ?>
                         </div>
                     </div>
-                    <div class="input-box">
-                        <input type="password" name="senha" id="senha" class="item" placeholder="Senha">
-                        <div class="error-txt senha">Senha não pode ficar em branco!</div>
+                    <div class="input-box-senha">
+                        <div>
+                            <input type="password" name="senha" id="senha" class="item" placeholder="Senha">
+                            <div class="error-txt senha">Senha não pode ficar em branco!</div>
+                        </div>
+                        <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
                     </div>
                     <div class="input-box">
                         <input type="password" name="confirm_senha" id="confirm_senha" class="item" placeholder="Confirme a sua senha">
@@ -66,9 +65,9 @@ unset($_SESSION['email']);
                     <button type="submit">Cadastrar</button>
                     <p>Já tem uma conta? <a class="ai" href="login.php">Entre aqui</a></p>
                 </form>
-            </div>
-            <div class="logo3">
-                <img src="./imagens/imagem3.jpg"></img>
+                <div class="logo3">
+                    <img src="./imagens/imagem3.jpg"></img>
+                </div>
             </div>
         </section>
     </main>

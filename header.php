@@ -1,9 +1,21 @@
 <header>
-    <h1>EXPO FSA</h1>
+    <a href="./index.php"><img src="./imagens/logo-fsa-p.png" alt="logo FSA"></a>
     <nav>
-        <ul>
-            <li><a href="./login.php">LOGIN</a></li>
-        </ul>
+        <?php
+        if (isset($_SESSION['login'])) {
+        ?>
+            <ul>
+                <li><a href="./sair.php">SAIR</a></li>
+            </ul>
+        <?php
+        } else {
+        ?>
+            <ul>
+                <li><a href="./login.php">ENTRAR</a></li>
+            </ul>
+        <?php
+        }
+        ?>
     </nav>
 </header>
 <section class="barralateral">
@@ -24,5 +36,12 @@
                 <img src="./imagens/mapa.png" alt="Ícone 4">
             </a>
         </div>
+        <?php
+        if (isset($_SESSION['admin']) && $_SESSION['admin'] > 0) { ?>
+            <div class="icone">
+                ADMIN
+            </div>
+        <?php
+        }?>
     </div>
 </section>

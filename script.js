@@ -96,3 +96,16 @@ function checkEmail() {
         email.siblings().removeClass("error");
     }
 }
+
+function mostrarSenha() {
+    const senha = $("#senha");
+    const btnSenha = $("#btn-senha");
+
+    if(senha.attr('type') === 'password') {
+        senha.attr('type', 'text');
+        btnSenha.removeClass('bi-eye-fill').addClass('bi-eye-slash-fill');
+    }else if(senha.attr('type') === 'text') {
+        senha.attr('type', 'password');
+        btnSenha.removeClass('bi-eye-slash-fill').addClass('bi-eye-fill');
+    }
+}

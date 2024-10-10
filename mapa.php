@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['url_anterior'] = '../mapa.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 

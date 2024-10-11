@@ -1,0 +1,46 @@
+<svg id="PALESTRANTES" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 837.68 730.48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3f4ec1;
+      }
+
+      .cls-2 {
+        fill: #3b3fa2;
+      }
+
+      .cls-3 {
+        fill: #4f5de4;
+      }
+    </style>
+  </defs>
+  <g id="formas">
+    <g id="bolhas">
+      <ellipse class="cls-1" cx="113.67" cy="424.11" rx="38.49" ry="38.52"/>
+      <ellipse class="cls-2" cx="80.24" cy="177.41" rx="45.26" ry="45.3"/>
+      <ellipse class="cls-2" cx="627.08" cy="58.75" rx="24.44" ry="24.46"/>
+      <ellipse class="cls-2" cx="766.21" cy="435.08" rx="40.03" ry="40.07"/>
+      <ellipse class="cls-2" cx="707.38" cy="567.74" rx="28.96" ry="28.98"/>
+      <ellipse class="cls-2" cx="618.44" cy="657" rx="15.79" ry="15.81"/>
+      <ellipse class="cls-2" cx="298.38" cy="623.3" rx="26.55" ry="26.58"/>
+      <ellipse class="cls-2" cx="170.79" cy="576.51" rx="31.68" ry="31.71"/>
+      <ellipse class="cls-2" cx="119.1" cy="468.07" rx="5.43" ry="5.44"/>
+      <ellipse class="cls-1" cx="133.02" cy="297.86" rx="25.61" ry="25.63"/>
+      <ellipse class="cls-1" cx="183.84" cy="112.76" rx="17.21" ry="17.22"/>
+      <ellipse class="cls-1" cx="313.23" cy="58.75" rx="11.7" ry="11.71"/>
+      <ellipse class="cls-1" cx="412.28" cy="30.38" rx="16.65" ry="16.66"/>
+      <circle class="cls-1" cx="695.24" cy="95.54" r="4.31"/>
+      <ellipse class="cls-1" cx="747.04" cy="7.28" rx="7.27" ry="7.28"/>
+      <ellipse class="cls-1" cx="797.33" cy="83.39" rx="11.52" ry="11.53"/>
+      <ellipse class="cls-3" cx="815.76" cy="296.11" rx="21.92" ry="21.93"/>
+      <ellipse class="cls-3" cx="220.9" cy="22.95" rx="15.65" ry="15.67"/>
+      <ellipse class="cls-3" cx="25.58" cy="22.95" rx="7.79" ry="7.8"/>
+      <ellipse class="cls-3" cx="17.79" cy="286.79" rx="17.79" ry="17.81"/>
+      <circle class="cls-3" cx="102.71" cy="547.53" r="4.7"/>
+      <ellipse class="cls-3" cx="758.32" cy="187.56" rx="39.01" ry="39.04"/>
+      <ellipse class="cls-3" cx="389.88" cy="690.79" rx="9.3" ry="9.3"/>
+      <ellipse class="cls-3" cx="528.23" cy="721.38" rx="9.1" ry="9.11"/>
+      <ellipse class="cls-1" cx="33.37" cy="443.34" rx="16.32" ry="16.33"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg id="PALESTRANTES" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 884.2 818.91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4f5de4;
+      }
+
+      .cls-2 {
+        fill: #3b3fa2;
+      }
+
+      .cls-3 {
+        fill: #3f4ec1;
+      }
+    </style>
+  </defs>
+  <g id="formas">
+    <rect class="cls-1" width="663.76" height="258.51" rx="116.47"/>
+    <rect class="cls-2" x="87.96" y="193.62" width="796.24" height="477.18" rx="36.83"/>
+    <rect class="cls-3" x="48.43" y="638.33" width="717.18" height="180.59" rx="90.29"/>
+  </g>
+</svg>

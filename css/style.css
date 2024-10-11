@@ -130,7 +130,8 @@ button {
   text-decoration: none;
 }
 
-.input-box-senha, .input-box-perfil {
+.input-box-senha,
+.input-box-perfil {
   margin: 25px;
   display: flex;
   align-items: center;
@@ -138,7 +139,8 @@ button {
   position: relative;
 }
 
-.error-txt.senha, .perfil-container .error-txt {
+.error-txt.senha,
+.perfil-container .error-txt {
   margin: 0.2rem;
 }
 
@@ -178,7 +180,8 @@ button {
   margin-bottom: rem;
 }
 
-.perfil-container i, .login-container i {
+.perfil-container i,
+.login-container i {
   font-size: 1.5rem;
   cursor: pointer;
   position: absolute;
@@ -265,4 +268,88 @@ button {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+
+.palestra {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.palestra-texto {
+  position: absolute;
+}
+
+#nome-palestrante {
+  position: absolute;
+  display: flex;
+  color: white;
+  font-size: 2rem;
+  top: 6.5rem;
+  right: 13rem;
+  width: 27rem;
+  height: 7rem;
+  align-items: center;
+}
+
+#curriculo-palestrante {
+  position: absolute;
+  top: 16rem;
+  right: 3rem;
+  width: 32rem;
+  color: white;
+  font-size: 1rem;
+}
+
+#titulo-palestra {
+  position: absolute;
+  top: 37rem;
+  right: 8rem;
+  width: 30rem;
+  color: white;
+  font-size: 1rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.palestra img {
+  width: 42rem;
+  margin: 5rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+.palestrante {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+#bolhas {
+  position: absolute;
+  z-index: -1;
+  width: 42rem;
+}
+
+#foto-palestrante {
+  position: absolute;
+}
+
+#foto-palestrante img {
+  width: 28rem;
+  height: 28rem;
+  margin-top: 5.4rem;
+  margin-left: 7rem;
+  border-radius: 100rem;
+}
+
+#moldura-palestrante {
+  width: 31rem;
+  margin-left: 7rem;
 }

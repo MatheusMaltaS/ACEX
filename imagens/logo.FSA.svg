@@ -1,0 +1,36 @@
+<svg id="BARRA" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.92 33.13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0a3d89;
+      }
+
+      .cls-2 {
+        fill: #005eae;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        font-size: 27.44px;
+        fill: #fff;
+        font-family: TimesNewRomanPS-BoldMT, Times New Roman;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        letter-spacing: -0.04em;
+      }
+
+      .cls-5 {
+        letter-spacing: -0.06em;
+      }
+    </style>
+  </defs>
+  <g id="home1">
+    <ellipse class="cls-1" cx="14.66" cy="14.68" rx="14.66" ry="14.68"/>
+    <ellipse class="cls-2" cx="45.66" cy="14.68" rx="14.66" ry="14.68"/>
+    <ellipse class="cls-1" cx="76.25" cy="14.68" rx="14.66" ry="14.68"/>
+    <text class="cls-3" transform="translate(6.72 24.14)">F</text>
+    <text class="cls-4" transform="translate(38.15 24.14)">S</text>
+    <text class="cls-5" transform="translate(66.8 24.14)">A</text>
+  </g>
+</svg>

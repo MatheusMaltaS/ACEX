@@ -36,12 +36,17 @@
                 <img src="./imagens/mapa.png" alt="Ícone 4">
             </a>
         </div>
+        <div class="icone">
+            <a href="palestra.php">
+                <img src="./imagens/palestra.icon.svg" alt="Ícone 5">
+            </a>
+        </div>
         <?php
         if (isset($_SESSION['admin']) && $_SESSION['admin'] > 0) { ?>
             <div class="icone">
                 ADMIN
             </div>
         <?php
-        }?>
+        } ?>
     </div>
 </section>

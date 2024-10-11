@@ -1,0 +1,22 @@
+<svg id="PALESTRANTES" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 652.54 653.07">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4f5de4;
+      }
+
+      .cls-2 {
+        fill: #3f4ec1;
+      }
+
+      .cls-3 {
+        fill: #3b3fa2;
+      }
+    </style>
+  </defs>
+  <g id="formas">
+    <ellipse class="cls-1" cx="326.27" cy="326.53" rx="326.27" ry="326.53"/>
+    <ellipse class="cls-2" cx="326.91" cy="326.53" rx="312.9" ry="313.15"/>
+    <ellipse class="cls-3" cx="326.27" cy="326.53" rx="294.69" ry="294.92"/>
+  </g>
+</svg>

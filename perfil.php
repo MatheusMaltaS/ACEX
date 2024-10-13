@@ -22,10 +22,10 @@ if (!isset($_SESSION["login"])) {
     include "header.php";
     ?>
 
-    <main>
+    <main class="main-padding">
         <section>
             <div class="form">
-                <form action="./db/perfil.php" method="POST" class="perfil-container perfil" id="form_cadastro">
+                <form action="./db/alterar.php" method="POST" class="perfil-container perfil" id="form_cadastro">
                     <h1>Olá
                         <?php
                         if (isset($_SESSION['nome'])) {

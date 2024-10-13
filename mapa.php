@@ -18,7 +18,7 @@ $_SESSION['url_anterior'] = '../mapa.php';
     <?php
     include "header.php";
     ?>
-    <main>
+    <main class="main-padding">
         <section class="mapa">
             <div id="imagem-div">
                 <img src="./imagens/Mapa-FSA-2024.jpg" alt="Descrição da imagem">

@@ -23,7 +23,7 @@ unset($_SESSION['email']);
   include "header.php";
   ?>
   <main>
-    <section>
+    <section class="main-padding">
       <div class="logo">
         <img src="./imagens/imagem1.jpg"></img>
       </div>
@@ -31,7 +31,7 @@ unset($_SESSION['email']);
         <div class="logo2">
           <img src="./imagens/imagem2.jpg"></img>
         </div>
-        <form action="./db/login.php" method="POST" class="login-container" id="form_cadastro">
+        <form action="./db/logar.php" method="POST" class="login-container" id="form_cadastro">
           <h1>Faça o login</h1>
           <div class="input-box">
             <input type="text" name="email" id="email" class="item" placeholder="E-mail" value="<?php echo htmlspecialchars($email); ?>">

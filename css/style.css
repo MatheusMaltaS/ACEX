@@ -49,8 +49,12 @@ nav a {
 }
 
 main {
-  padding: 6rem 10rem 0 10rem;
+  padding: 0 10rem;
   flex-wrap: wrap;
+}
+
+.main-padding {
+  padding: 6rem 10rem 0 10rem;
 }
 
 .barralateral {
@@ -275,7 +279,11 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.palestra:nth-child(1) {
+  padding-top: 7rem;
 }
 
 .palestra-texto {
@@ -313,6 +321,7 @@ button {
   height: 5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 1.7rem;
   text-align: center;
 }
@@ -326,15 +335,15 @@ button {
 
 .palestrante {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
 }
 
 #bolhas {
   position: absolute;
   z-index: -1;
   width: 42rem;
+  margin-top: 2.6rem;
 }
 
 #foto-palestrante {
@@ -344,12 +353,39 @@ button {
 #foto-palestrante img {
   width: 28rem;
   height: 28rem;
-  margin-top: 5.4rem;
+  margin-top: 5.5rem;
   margin-left: 7rem;
   border-radius: 100rem;
+  object-fit: cover;
 }
 
 #moldura-palestrante {
   width: 31rem;
   margin-left: 7rem;
+  margin-top: 4rem;
+}
+
+.button-palestra {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.palestra button {
+  background-color: #3E4EC1;
+  color: var(--text-color);
+  width: 16rem;
+  height: 3rem;
+  margin-top: 0rem;
+}
+
+.palestra .aviso-txt {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.palestra .sucess-txt {
+  color: green;
+  font-size: 1.2rem;
 }

@@ -20,12 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $senha_hash = $usuario['senha'];
 
         if (password_verify($senha, $senha_hash)) {
+            $_SESSION['id'] = $usuario['id'];
             $_SESSION['login'] = true;
             $_SESSION['nome'] = $usuario['nome'];
             $_SESSION['email'] = $usuario['email'];
             $_SESSION['senha'] = $senha;
             $_SESSION['admin'] = $usuario['admin'];
-            $_SESSION['id'] = $usuario['id'];
             if(isset($_SESSION['url_anterior'])) {
                 header("Location: " . $_SESSION['url_anterior']);
             } else {

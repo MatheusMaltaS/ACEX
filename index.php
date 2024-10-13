@@ -18,7 +18,7 @@ $_SESSION['url_anterior'] = '../index.php';
     <?php
     include "header.php";
     ?>
-    <main>
+    <main class="main-padding">
         <section>
 
         </section>

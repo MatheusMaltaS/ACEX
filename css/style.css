@@ -106,7 +106,7 @@ main {
   width: 35rem;
 }
 
-.login-container input {
+.login-container input, textarea {
   width: 30rem;
   padding: 0.5rem;
   border: none;
@@ -388,4 +388,19 @@ button {
 .palestra .sucess-txt {
   color: green;
   font-size: 1.2rem;
+}
+
+.suporte {
+  display: flex;
+  justify-content: center;
+}
+
+.suporte iframe {
+  width: 100vw;
+  height: 80vh;
+  border-radius: 2rem;
+}
+
+textarea {
+  resize: none;
 }

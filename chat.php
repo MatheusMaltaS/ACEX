@@ -18,6 +18,15 @@ $_SESSION['url_anterior'] = '../chat.php';
     <?php
     include "header.php";
     ?>
+    <main>
+        <section class="main-padding">
+            <div class="suporte">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSduqFxYaq4TSp_y2D1MEucrssRDfETOzoLMveuKSfNgTGjpYQ/viewform"
+                    frameborder="0" marginheight="0" marginwidth="0">Carregando…
+                </iframe>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

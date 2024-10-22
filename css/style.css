@@ -106,7 +106,8 @@ main {
   width: 35rem;
 }
 
-.login-container input, textarea {
+.login-container input,
+textarea {
   width: 30rem;
   padding: 0.5rem;
   border: none;
@@ -120,7 +121,8 @@ main {
   margin: 25px;
 }
 
-button {
+button,
+.button {
   background-color: var(--text-color);
   border: none;
   padding: 6px;
@@ -132,6 +134,14 @@ button {
   margin-top: 10px;
   margin-bottom: 20px;
   text-decoration: none;
+}
+
+.button {
+  display: flex;
+  width: 30.3rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.4rem;
 }
 
 .input-box-senha,
@@ -372,6 +382,15 @@ button {
   align-items: center;
 }
 
+.button-palestra-admin {
+  margin-left: 2rem;
+  width: 34rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .palestra button {
   background-color: #3E4EC1;
   color: var(--text-color);
@@ -399,8 +418,19 @@ button {
   width: 100vw;
   height: 80vh;
   border-radius: 2rem;
+  aspect-ratio: 9/16;
 }
 
 textarea {
   resize: none;
+}
+
+.imagem-div {
+  display: flex;
+  height: 80vh;
+  width: 70vw;
+}
+
+#mapa {
+  width: 100%;
 }

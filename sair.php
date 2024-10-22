@@ -7,13 +7,12 @@ unset($_SESSION['email']);
 unset($_SESSION['senha']);
 unset($_SESSION['admin']);
 
-// Verifica se a URL da página anterior está disponível
-if (isset($_SERVER['HTTP_REFERER'])) {
-    // Redireciona de volta para a página anterior
-    header("Location: " . $_SERVER['HTTP_REFERER']);
-    exit;
+if(isset($_SESSION['url_anterior'])) {
+    if($_SESSION['url_anterior'] == "admin.php" || $_SESSION['url_anterior'] == "cadastro_palestra.php") {
+        header("Location: ./index.php");
+    } else {
+        header("Location: ./" . $_SESSION['url_anterior']);
+    }
 } else {
-    // Caso não exista um HTTP_REFERER, redireciona para uma página padrão
-    header("Location: index.php");
-    exit;
+    header("Location: ./index.php");
 }

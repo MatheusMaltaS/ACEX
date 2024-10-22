@@ -2,6 +2,10 @@
 // Inicia a sessão
 session_start();
 
+if (isset($_SESSION["login"])) {
+    header("Location: ./" . $_SESSION['url_anterior']);
+}
+
 $nome = $_SESSION['nome'] ?? '';
 $email = $_SESSION['email'] ?? '';
 

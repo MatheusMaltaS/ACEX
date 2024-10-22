@@ -1,6 +1,10 @@
 <?php
 session_start();
-$_SESSION['url_anterior'] = '../index.php';
+
+include "verificar_admin.php";
+
+$_SESSION['url_anterior'] = 'index.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

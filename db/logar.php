@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['senha'] = $senha;
             $_SESSION['admin'] = $usuario['admin'];
             if(isset($_SESSION['url_anterior'])) {
-                header("Location: " . $_SESSION['url_anterior']);
+                header("Location: ../" . $_SESSION['url_anterior']);
             } else {
                 header("Location: ../index.php");
             }

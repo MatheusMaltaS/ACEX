@@ -42,7 +42,7 @@ function gerarCodigo($conexao, $id_palestra, $id_usuario)
         }
 
         if (isset($_SESSION['url_anterior'])) {
-            header("Location: " . $_SESSION['url_anterior']."#palestra$id_palestra");
+            header("Location: ../" . $_SESSION['url_anterior']."#palestra$id_palestra");
         } else {
             header("Location: ../index.php");
         }

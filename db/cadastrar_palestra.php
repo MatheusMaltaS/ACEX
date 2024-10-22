@@ -5,11 +5,12 @@ session_start();
 include 'config.php'; // incluindo o arquivo config.php  para conseguir inserir os dados no bd
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $nome_palestrante = $_POST['nome_palestrante'];
+    $descricao_palestrante = $_POST['descricao_palestrante'];
+    $tema = $_POST['tema'];
+    $file = $_POST['file'];
 
-    $senha_codificada = password_hash($senha, PASSWORD_DEFAULT);
+    header("Location: ../index.php");
 
     $query = "SELECT * FROM usuarios WHERE email = ?";
     $stmt = $conexao->prepare($query);

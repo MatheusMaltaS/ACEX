@@ -1,6 +1,9 @@
 <?php
 session_start();
-$_SESSION['url_anterior'] = '../mapa.php';
+
+include "verificar_admin.php";
+
+$_SESSION['url_anterior'] = 'mapa.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +23,8 @@ $_SESSION['url_anterior'] = '../mapa.php';
     ?>
     <main class="main-padding">
         <section class="mapa">
-            <div id="imagem-div">
-                <img src="./imagens/Mapa-FSA-2024.jpg" alt="Descrição da imagem">
+            <div class="imagem-div">
+                <img src="./imagens/mapa.EXPO.svg" name="mapa" id="mapa" alt="Descrição da imagem">
             </div>
         </section>
     </main>

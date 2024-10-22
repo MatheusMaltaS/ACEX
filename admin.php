@@ -1,18 +1,21 @@
 <?php
 session_start();
+$admin = $_SESSION['admin'] ?? 0;
 
-include "verificar_admin.php";
+if ($admin == 0) {
+    if (isset($_SESSION['url_anterior']) ? header("Location: " . $_SESSION['url_anterior']) : header("Location: ./index.php"));
+}
 
-$_SESSION['url_anterior'] = 'palestra.php';
+$_SESSION['url_anterior'] = 'admin.php';
 
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palestras Expo FSA</title>
+    <title>Mapa Expo FSA</title>
     <?php
     include "links.php";
     ?>
@@ -40,7 +43,7 @@ $_SESSION['url_anterior'] = 'palestra.php';
                 $foto = $row["foto_palestrante"];
 
             ?>
-                <div class="palestra" id="palestra<?php echo $id?>">
+                <div class="palestra" id="palestra<?php echo $id ?>">
                     <div class="palestra-texto">
                         <div id="nome-palestrante">
                             <?php echo $nome ?>
@@ -59,30 +62,11 @@ $_SESSION['url_anterior'] = 'palestra.php';
                         </div>
                         <img src="./imagens/fundo.palestrante.svg" id="moldura-palestrante" alt="Moldura para palestrante">
                         <img src="./imagens/bolhas.fundo.svg" id="bolhas" alt="Fundo de bolhas">
-                        <div class="button-palestra">
-                            <a href="./db/ingressos.php?<?php echo "id=$id" ?>"><button>Gerar ingresso</button></a>
-                            <?php
-                            if (isset($_SESSION["aviso$id"])) {
-                            ?>
-                                <div class="aviso-txt">
-                                    <?php
-                                    echo $_SESSION["aviso$id"];
-                                    unset($_SESSION["aviso$id"]);
-                                    ?>
-                                </div>
-                            <?php
-                            } else if (isset($_SESSION["aviso_sucess$id"])) {
-                            ?>
-                                <div class="sucess-txt">
-                                    <?php
-                                    echo $_SESSION["aviso_sucess$id"];
-                                    unset($_SESSION["aviso_sucess$id"]);
-                                    ?>
-                                </div>
-                            <?php
-                            }
-                            ?>
+                        <div class="button-palestra-admin">
+                            <a href="altera_palestra.php?<?php echo "id=$id" ?>"><button>Alterar Palestra</button></a>
+                            <a href="./db/remover_palestra.php?<?php echo "id=$id" ?>"><button>Remover Palestra</button></a>
                         </div>
+                        <a href="cadastro_palestra.php"><button style="margin-left: 2rem; width: 34rem;">Cadastrar Nova Palestra</button></a>
                     </div>
                 </div>
             <?php
@@ -90,6 +74,7 @@ $_SESSION['url_anterior'] = 'palestra.php';
             ?>
         </section>
     </main>
+
 </body>
 
 </html>

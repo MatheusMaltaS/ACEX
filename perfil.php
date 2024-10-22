@@ -1,7 +1,11 @@
 <?php
 session_start();
+
+include "verificar_admin.php";
+
+$_SESSION['url_anterior'] = 'perfil.php';
+
 if (!isset($_SESSION["login"])) {
-    $_SESSION['url_anterior'] = '../perfil.php';
     header("Location: ./login.php");
 }
 ?>

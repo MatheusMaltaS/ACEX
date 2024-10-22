@@ -1,6 +1,7 @@
 <?php
 session_start();
-$_SESSION['url_anterior'] = '../chat.php';
+include "verificar_admin.php";
+$_SESSION['url_anterior'] = 'chat.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

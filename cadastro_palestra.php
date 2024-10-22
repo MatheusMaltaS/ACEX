@@ -1,3 +1,13 @@
+<?php
+session_start();
+$admin = $_SESSION['admin'] ?? 0;
+
+if ($admin == 0) {
+    if (isset($_SESSION['url_anterior']) ? header("Location: " . $_SESSION['url_anterior']) : header("Location: ./index.php"));
+}
+$_SESSION['url_anterior'] = 'cadastro_palestra.php';
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,9 +41,13 @@
                         <input type="text" name="tema" id="tema" class="item" placeholder="Tema da palestra" maxlength="80">
                         <div class="error-txt tema">Tema da palestra não pode ficar em branco!</div>
                     </div>
-                    <div class="input-box">
-                        <span style="display: flex; margin-left: 0.4rem;">Foto do palestrante:</span>
-                        <input style="margin-left: -1.1rem;" type="file" name="file" id="file" accept="image/*" required>
+                    <div class="input-box" style="align-items: center; flex-direction: column;">
+                        <span style="display: flex; margin-left: 0.4rem; text-align: start; width: 100%;" name="foto_palestrante" id="foto_palestrante">Foto do palestrante: </span>
+                        <label for="file" class="button">
+                            Escolha uma imagem
+                        </label>
+                        <input style="margin-left: -1.1rem; display: none" type="file" name="file" id="file" class="item" accept="image/png, image/jpeg, image/jpg">
+                        <div class="error-txt file" style="margin-top: -1rem;">Necessário enviar a foto do palestrante!</div>
                     </div>
                     <button type="submit">Cadastrar</button>
                 </form>

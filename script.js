@@ -12,6 +12,10 @@ $(document).ready(function () {
         });
     });
 
+    $("#file").change(function () {
+        checkInputs(this.name);
+    });
+
     const form = $("#form_cadastro");
     form.submit(function (event) {
         event.preventDefault();
@@ -28,7 +32,7 @@ $(document).ready(function () {
         });
 
         if (enviar) this.submit();
-    })
+    });
 });
 
 function checkInputs(campo) {
@@ -50,10 +54,14 @@ function checkInputs(campo) {
 
     if (campo == "login") {
         $(".error-txt.login").text("Usuário ou e-mail não pode ficar em branco!");
-    } 
+    }
 
     if (campo == "senha") {
         $(".error-txt.senha").text("Senha não pode ficar em branco!");
+    }
+
+    if (campo == "file") {
+        $("#foto_palestrante").text("Foto do palestrante: " + $("#file").val().substring(12))
     }
 }
 
@@ -101,10 +109,10 @@ function mostrarSenha() {
     const senha = $("#senha");
     const btnSenha = $("#btn-senha");
 
-    if(senha.attr('type') === 'password') {
+    if (senha.attr('type') === 'password') {
         senha.attr('type', 'text');
         btnSenha.removeClass('bi-eye-fill').addClass('bi-eye-slash-fill');
-    }else if(senha.attr('type') === 'text') {
+    } else if (senha.attr('type') === 'text') {
         senha.attr('type', 'password');
         btnSenha.removeClass('bi-eye-slash-fill').addClass('bi-eye-fill');
     }

@@ -6,7 +6,7 @@ include "verificar_admin.php";
 $_SESSION['url_anterior'] = 'mapa.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">

@@ -12,8 +12,28 @@ $(document).ready(function () {
         });
     });
 
-    $("#file").change(function () {
-        checkInputs(this.name);
+    $("#file").change(function (event) {
+        const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#imagePreview').attr('src', e.target.result).show();
+                    $('#removeImage').show();
+                    $("#tem_imagem").val("Sim");
+                };
+                reader.readAsDataURL(file); // Lê o arquivo como URL de dados
+            } else {
+                $('#imagePreview').hide();
+            }
+    });
+
+    // Função para remover a imagem
+    $('#removeImage').on('click', function(event) {
+        event.preventDefault();
+        $('#imagePreview').hide().attr('src', ''); // Esconde e limpa a imagem
+        $('#file').val(''); // Limpa o input file
+        $(this).hide(); // Esconde o botão de remover
+        $("#tem_imagem").val("Não");
     });
 
     const form = $("#form_cadastro");
@@ -58,10 +78,6 @@ function checkInputs(campo) {
 
     if (campo == "senha") {
         $(".error-txt.senha").text("Senha não pode ficar em branco!");
-    }
-
-    if (campo == "file") {
-        $("#foto_palestrante").text("Foto do palestrante: " + $("#file").val().substring(12))
     }
 }
 

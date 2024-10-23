@@ -4,7 +4,7 @@ session_start();
 
 include 'config.php';
 
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['id']) && isset($_GET['id'])) {
     $id_palestra = $_GET['id'];
     $id_usuario = $_SESSION['id'];
 
@@ -41,11 +41,7 @@ function gerarCodigo($conexao, $id_palestra, $id_usuario)
             $_SESSION["aviso$id_palestra"] = "Ingresso já foi gerado anteriormente!";
         }
 
-        if (isset($_SESSION['url_anterior'])) {
-            header("Location: ../" . $_SESSION['url_anterior']."#palestra$id_palestra");
-        } else {
-            header("Location: ../index.php");
-        }
+        header("Location: ../palestra.php#palestra$id_palestra");
     } else {
         gerarCodigo($conexao, $id_palestra, $id_usuario);
     }

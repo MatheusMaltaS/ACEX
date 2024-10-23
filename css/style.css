@@ -12,11 +12,11 @@
 header {
   background-color: var(--bg-color);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100vw;
   z-index: 1;
+  padding-left: 1rem;
 }
 
 header h1 {
@@ -25,13 +25,26 @@ header h1 {
 }
 
 header a {
-  padding: 0.5rem 1rem;
+  margin: 0.5rem 2rem;
   color: var(--text-color);
   text-decoration: none;
+  display: flex;
 }
 
-header img {
-  width: 8rem;
+.div_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 97vw;
+}
+
+.logo-fsa {
+  width: 7rem;
+}
+
+.tres-barras {
+  width: 2rem;
+  cursor: pointer;
 }
 
 nav ul {
@@ -78,15 +91,23 @@ main {
 
 .icone {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   cursor: pointer;
+}
+
+.icone a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: white;
+  text-decoration: none;
 }
 
 .icone img {
   width: 2.5rem;
   height: 2.5rem;
-  margin-bottom: 10px;
+  margin-right: 0.5rem;
 }
 
 .icone span {
@@ -132,7 +153,6 @@ button,
   color: var(--bg-color);
   cursor: pointer;
   margin-top: 10px;
-  margin-bottom: 20px;
   text-decoration: none;
 }
 
@@ -142,6 +162,10 @@ button,
   justify-content: center;
   align-items: center;
   margin-left: 0.4rem;
+}
+
+.login-container button {
+  margin-bottom: 1rem;
 }
 
 .input-box-senha,
@@ -167,7 +191,8 @@ button,
   width: 35rem;
 }
 
-.perfil-container input {
+.perfil-container input,
+.perfil-container textarea {
   width: 25rem;
   padding: 0.5rem;
   border: none;
@@ -289,11 +314,7 @@ button,
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 3rem;
-}
-
-.palestra:nth-child(1) {
-  padding-top: 7rem;
+  padding: 6.5rem 0 3rem 0;
 }
 
 .palestra-texto {
@@ -369,6 +390,14 @@ button,
   object-fit: cover;
 }
 
+#imagePreview {
+  display: none;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100rem;
+  object-fit: cover;
+}
+
 #moldura-palestrante {
   width: 31rem;
   margin-left: 7rem;
@@ -389,6 +418,7 @@ button,
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .palestra button {
@@ -433,4 +463,29 @@ textarea {
 
 #mapa {
   width: 100%;
+}
+
+.palestra-container span {
+  display: flex;
+  margin-left: 0.4rem;
+  text-align: start;
+  width: 100%;
+}
+
+.div_button-palestra {
+  width: 31.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div_button-palestra label, .div_button-palestra button {
+  width: 31rem;
+  margin: 10px 0 0 0.4rem;
+}
+
+.sem-palestras {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75vh
 }

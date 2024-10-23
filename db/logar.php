@@ -41,6 +41,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['email'] = $email;
         header("Location: ../login.php");
     }
+} else {
+    if (isset($_SESSION['url_anterior'])) {
+        header("Location: ../" . $_SESSION['url_anterior']);
+    } else {
+        header("Location: ../index.php");
+    }
 }
 
 $stmt->close();

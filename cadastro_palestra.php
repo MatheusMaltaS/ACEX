@@ -27,7 +27,7 @@ $_SESSION['url_anterior'] = 'cadastro_palestra.php';
     <main class="main-padding">
         <section>
             <div class="form">
-                <form action="./db/cadastrar_palestra.php" method="POST" class="login-container" id="form_cadastro">
+                <form action="./db/cadastrar_palestra.php" method="POST" enctype="multipart/form-data" class="login-container" id="form_cadastro">
                     <h1>Cadastro de Palestra</h1>
                     <div class="input-box">
                         <input type="text" name="nome_palestrante" id="nome_palestrante" class="item" placeholder="Nome do palestrante" maxlength="50">
@@ -43,11 +43,16 @@ $_SESSION['url_anterior'] = 'cadastro_palestra.php';
                     </div>
                     <div class="input-box" style="align-items: center; flex-direction: column;">
                         <span style="display: flex; margin-left: 0.4rem; text-align: start; width: 100%;" name="foto_palestrante" id="foto_palestrante">Foto do palestrante: </span>
-                        <label for="file" class="button">
-                            Escolha uma imagem
-                        </label>
-                        <input style="margin-left: -1.1rem; display: none" type="file" name="file" id="file" class="item" accept="image/png, image/jpeg, image/jpg">
-                        <div class="error-txt file" style="margin-top: -1rem;">Necessário enviar a foto do palestrante!</div>
+                        <img id="imagePreview" src="" alt="Pré-visualização da imagem">
+                        <div class="div_button-palestra">
+                            <label for="file" class="button">
+                                Escolha uma imagem
+                            </label>
+                            <button id="removeImage" style="display: none;" class="button">
+                                Remover Imagem
+                            </button>
+                        </div>
+                        <input style="margin-left: -1.1rem; display: none" type="file" name="file" id="file" accept="image/png, image/jpeg, image/jpg">
                     </div>
                     <button type="submit">Cadastrar</button>
                 </form>

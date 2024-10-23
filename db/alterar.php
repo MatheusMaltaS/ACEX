@@ -37,6 +37,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     header("Location: ../perfil.php");
+}   else {
+    if (isset($_SESSION['url_anterior'])) {
+        header("Location: ../" . $_SESSION['url_anterior']);
+    } else {
+        header("Location: ../index.php");
+    }
 }
 
 $conexao->close();

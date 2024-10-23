@@ -2,24 +2,27 @@
 $admin = $_SESSION['admin'] ?? 0;
 ?>
 <header>
-    <a href="./index.php"><img src="./imagens/logo-fsa-p.png" alt="logo FSA"></a>
-    <nav>
-        <?php
-        if (isset($_SESSION['login'])) {
-        ?>
-            <ul>
-                <li><a href="./sair.php">SAIR</a></li>
-            </ul>
-        <?php
-        } else {
-        ?>
-            <ul>
-                <li><a href="./login.php">ENTRAR</a></li>
-            </ul>
-        <?php
-        }
-        ?>
-    </nav>
+    <img src="./imagens/tresbarras_icon.svg" alt="Menu lateral" class="tres-barras">
+    <div class="div_header">
+        <a href="./index.php"><img src="./imagens/logo-fsa-p.png" class="logo-fsa" alt="logo FSA"></a>
+        <nav>
+            <?php
+            if (isset($_SESSION['login'])) {
+            ?>
+                <ul>
+                    <li><a href="./sair.php">SAIR</a></li>
+                </ul>
+            <?php
+            } else {
+            ?>
+                <ul>
+                    <li><a href="./login.php">ENTRAR</a></li>
+                </ul>
+            <?php
+            }
+            ?>
+        </nav>
+    </div>
 </header>
 <section class="barralateral">
     <div class="area-icones">
@@ -28,23 +31,22 @@ $admin = $_SESSION['admin'] ?? 0;
         ?>
             <div class="icone">
                 <a href="perfil.php">
-                    <img src="./imagens/pessoa.png" alt="Ícone 2">
+                    <img src="./imagens/perfil_icon.svg" alt="Ícone 2"> Perfil
                 </a>
             </div>
             <div class="icone">
                 <a href="mapa.php">
-                    <img src="./imagens/mapa.png" alt="Ícone 4">
+                    <img src="./imagens/mapa_icon.svg" alt="Ícone 4"> Mapa
                 </a>
             </div>
             <div class="icone">
                 <a href="palestra.php">
-                    <img src="./imagens/palestra.icon.svg" alt="Ícone 5">
+                    <img src="./imagens/palestra_icon.svg" alt="Ícone 5"> Palestras
                 </a>
             </div>
             <div class="icone">
                 <a href="chat.php">
-                    <img src="./imagens/chat.png" alt="Ícone 3">
-
+                    <img src="./imagens/suporte_icon.svg" alt="Ícone 3"> Suporte
                 </a>
             </div>
         <?php
@@ -52,7 +54,7 @@ $admin = $_SESSION['admin'] ?? 0;
         ?>
             <div class="icone">
                 <a href="admin.php">
-                    ADMIN
+                    <img src="./imagens/adm_icon.svg" alt="Ícone 3"> ADMIN
             </div>
             </a>
         <?php

@@ -7,15 +7,14 @@ if ($admin == 0) {
 }
 
 $_SESSION['url_anterior'] = 'admin.php';
-
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Expo FSA</title>
+    <title>Administração - Expo FSA</title>
     <?php
     include "links.php";
     ?>
@@ -34,6 +33,15 @@ $_SESSION['url_anterior'] = 'admin.php';
             $stmt = $conexao->prepare($query);
             $stmt->execute();
             $result = $stmt->get_result();
+
+            if ($result->num_rows == 0) {
+            ?>
+                <div class="palestra sem-palestras">
+                    <h1>Não há palestras no momento!</h1>
+                    <a href="cadastro_palestra.php" style="margin-top: 1rem"><button style="width: 24rem;">Cadastrar Nova Palestra</button></a>
+                </div>
+            <?php
+            }
 
             while ($row = $result->fetch_assoc()) {
                 $id = $row["id"];
@@ -58,7 +66,7 @@ $_SESSION['url_anterior'] = 'admin.php';
                     <img src="./imagens/fundo.textopal.svg" style="pointer-events: none;" alt="Fundo de texto para palestrantes">
                     <div class="palestrante">
                         <div id="foto-palestrante">
-                            <img src="./imagens/<?php echo $foto ?>" alt="Imagem do palestrante">
+                            <img src="./imgs_palestrantes/<?php echo $foto ?>" alt="Imagem do palestrante">
                         </div>
                         <img src="./imagens/fundo.palestrante.svg" id="moldura-palestrante" alt="Moldura para palestrante">
                         <img src="./imagens/bolhas.fundo.svg" id="bolhas" alt="Fundo de bolhas">

@@ -8,41 +8,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome_palestrante = $_POST['nome_palestrante'];
     $descricao_palestrante = $_POST['descricao_palestrante'];
     $tema = $_POST['tema'];
-    $file = $_POST['file'];
+    
+    if (isset($_FILES['file']) && $_FILES['file']['error'] == 0) {
+        $file = $_FILES['file'];
+        $foto_palestrante = time().$_FILES['file']['name'];
 
-    header("Location: ../index.php");
+        // Defina o diretório de destino
+        $uploadDir = '../imgs_palestrantes/';
 
-    $query = "SELECT * FROM usuarios WHERE email = ?";
-    $stmt = $conexao->prepare($query);
-    $stmt->bind_param("s", $email);
+        // Crie o diretório se ele não existir
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+
+        // Defina o caminho completo para o arquivo
+        $filePath = $uploadDir . basename($foto_palestrante);
+
+        // Mova o arquivo enviado para o diretório de destino
+        move_uploaded_file($file['tmp_name'], $filePath);
+    } else {
+        $foto_palestrante = "foto_padrao.jpg";
+    }
+
+    $sql = "INSERT INTO palestras (nome_palestrante, descricao_palestrante, tema, foto_palestrante) VALUES (?, ?, ?, ?)";
+    $stmt = $conexao->prepare($sql);
+    $stmt->bind_param("ssss", $nome_palestrante, $descricao_palestrante, $tema, $foto_palestrante);
     $stmt->execute();
     $result = $stmt->get_result();
-    
-    if ($result->num_rows == 0) {
-        $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
-        $stmt = $conexao->prepare($sql);
-        $stmt->bind_param("sss", $nome, $email, $senha_codificada);
-        $stmt->execute();
-        $result = $stmt->get_result();
 
-        $_SESSION['login'] = true;
-        $_SESSION['nome'] = $nome;
-        $_SESSION['email'] = $email;
-        $_SESSION['senha'] = $senha;
-        $_SESSION['id'] = $conexao->insert_id;
+    $id_palestra = $conexao->insert_id;
 
-        if(isset($_SESSION['url_anterior'])) {
-            header("Location: ../" . $_SESSION['url_anterior']);
-        } else {
-            header("Location: ../index.php");
-        }
+    header("Location: ../admin.php#palestra$id_palestra");
+} else {
+    if (isset($_SESSION['url_anterior'])) {
+        header("Location: ../" . $_SESSION['url_anterior']);
     } else {
-        $_SESSION['aviso'] = "Email já cadastrado!";
-        $_SESSION['nome'] = $nome;
-        $_SESSION['email'] = $email;
-        $_SESSION['senha'] = $senha;
-        $_SESSION['confirm_senha'] = $_POST['confirm_senha'];
-        header("Location: ../cadastro.php");
+        header("Location: ../index.php");
     }
 }
 
